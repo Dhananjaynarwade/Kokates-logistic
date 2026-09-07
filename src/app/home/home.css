@@ -1,0 +1,453 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #4e7ea6 0%,
+      #6d98bf 55%,
+      #7fa8ce 100%
+    );
+
+  color: white;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: relative;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 80%;
+  margin: auto;
+
+  padding-top: 45px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-symbol {
+  font-size: 55px;
+  font-weight: bold;
+  color: #2d807e;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #20395d;
+}
+
+.logo-text span {
+  color: #2d807e;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: #17345d;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+/* =========================
+   CLOUDS
+========================= */
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud-1 {
+  width: 520px;
+  height: 150px;
+  top: 50px;
+  left: 8%;
+}
+
+.cloud-1::before {
+  width: 170px;
+  height: 170px;
+  left: 80px;
+  bottom: 40px;
+}
+
+.cloud-1::after {
+  width: 220px;
+  height: 220px;
+  left: 230px;
+  bottom: 20px;
+}
+
+.cloud-2 {
+  width: 130px;
+  height: 45px;
+  top: 175px;
+  right: 38%;
+}
+
+.cloud-2::before {
+  width: 70px;
+  height: 70px;
+  left: 20px;
+  bottom: 20px;
+}
+
+.cloud-2::after {
+  width: 85px;
+  height: 85px;
+  right: 15px;
+  bottom: 10px;
+}
+
+.cloud-3 {
+  width: 160px;
+  height: 50px;
+  top: 430px;
+  right: 8%;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+
+  width: 850px;
+  max-width: 90%;
+
+  margin: 110px auto 0;
+
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 9px 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin: 35px 0 25px;
+
+  font-size: clamp(45px, 6vw, 75px);
+  line-height: 1.08;
+
+  font-weight: 900;
+
+  text-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+.hero-content p {
+  font-size: 21px;
+  margin-bottom: 45px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 17px 40px;
+  border-radius: 35px;
+}
+
+.primary-btn {
+  border: none;
+  background: white;
+  color: #24458a;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.secondary-btn {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+
+/* =========================
+   SHIP
+========================= */
+
+.ship {
+  position: absolute;
+
+  z-index: 15;
+
+  left: -300px;
+  bottom: 70px;
+
+  width: 320px;
+  height: 130px;
+
+  transition: transform 0.15s linear;
+}
+
+.ship-body {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 300px;
+  height: 65px;
+
+  background: #263c65;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    70% 100%,
+    0 100%
+  );
+}
+
+.ship-cabin {
+  position: absolute;
+
+  left: 170px;
+  bottom: 65px;
+
+  width: 110px;
+  height: 70px;
+
+  background: #d5dce7;
+}
+
+.cabin-window {
+  display: inline-block;
+
+  width: 17px;
+  height: 20px;
+
+  margin: 12px 3px;
+
+  background: #38699a;
+}
+
+.ship-window {
+  position: relative;
+
+  display: inline-block;
+
+  width: 24px;
+  height: 18px;
+
+  margin-left: 15px;
+  margin-top: 15px;
+
+  background: #496f9c;
+}
+
+.ship-chimney {
+  position: absolute;
+
+  left: 80px;
+  bottom: 65px;
+
+  width: 45px;
+  height: 55px;
+
+  background: #812f45;
+}
+
+
+/* =========================
+   WATER
+========================= */
+
+.water {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 75px;
+
+  background: rgba(25, 53, 91, 0.35);
+}
+
+
+/* =========================
+   OTHER SECTIONS
+========================= */
+
+.section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 20px;
+}
+
+.section-content {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.section-label {
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.section h2 {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.section p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.products-section {
+  background: #f5f8fc;
+  color: #18365d;
+}
+
+.about-section {
+  background: #e7f0f8;
+  color: #18365d;
+}
+
+.contact-section {
+  background: #244a72;
+  color: white;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.card {
+  flex: 1;
+
+  padding: 35px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 23px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    width: 90%;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero-content {
+    margin-top: 80px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .ship {
+    transform: scale(0.7);
+    transform-origin: bottom left;
+  }
+}
