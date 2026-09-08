@@ -1,0 +1,33 @@
+Open CMD and run these commands:
+
+1. Start Docker Desktop service
+
+net start com.docker.service
+
+If it says the service is already running, that's fine.
+
+2. Wait a few seconds, then check Docker
+
+docker info
+
+If Docker information appears, Docker Engine is ready.
+
+3. Go to your project
+
+cd /d "D:\Dhananjay AWS\Kokates-logistic"
+
+4. Start your existing container
+
+docker start kokates-logistic
+
+5. Check that it is running
+
+docker ps
+
+You want to see:
+
+kokates-logistic    0.0.0.0:8080->80/tcp
+
+6. Open your application
+
+start http://localhost:8080
