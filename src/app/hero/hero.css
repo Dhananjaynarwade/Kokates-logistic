@@ -1,0 +1,317 @@
+.hero-scroll {
+  position: relative;
+  overflow: visible;
+
+  /* more scroll distance = slower boat */
+  height: 500vh;
+}
+.hero {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #8cb4d8 0%,
+    #74a0cc 45%,
+    #31699e 100%
+  );
+}
+
+
+
+/* text stays above boat */
+
+.hero-content {
+  position: relative;
+  z-index: 20;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  padding-top: 255px;
+
+  text-align: center;
+}
+
+
+/* BADGE */
+
+.hero-badge {
+  width: fit-content;
+
+  margin: 0 auto 35px;
+
+  padding: 8px 24px;
+
+  border: 1px solid rgba(255,255,255,0.35);
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.14);
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  backdrop-filter: blur(5px);
+}
+
+
+/* HEADING */
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 5vw, 70px);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  color: white;
+
+  text-shadow:
+    0 5px 15px rgba(0,0,0,0.12);
+}
+
+
+/* PARAGRAPH */
+
+.hero-content p {
+  margin: 25px auto 35px;
+
+  font-size: 17px;
+
+  color: rgba(255,255,255,0.9);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.hero-buttons a {
+  min-width: 180px;
+
+  padding: 15px 27px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+
+.btn-primary {
+  background: white;
+  color: #173d73;
+}
+
+
+.btn-secondary {
+  border: 1px solid rgba(255,255,255,0.8);
+
+  color: white;
+
+  background: transparent;
+}
+
+
+.hero-buttons a:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   SHIP
+========================= */
+.ship {
+  position: absolute !important;
+
+  left: 0 !important;
+  right: auto !important;
+
+  /* NEVER allow boat to go upward */
+  top: auto !important;
+  bottom: 35px !important;
+
+  width: 650px;
+  height: auto;
+
+  z-index: 5;
+
+  pointer-events: none;
+  will-change: transform;
+}
+
+.ship svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ship-body {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 420px;
+  height: 62px;
+
+  background: #18324f;
+
+  border-bottom: 7px solid #e72b55;
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      92% 100%,
+      7% 100%
+    );
+}
+
+
+.ship-body span {
+  position: absolute;
+
+  left: 110px;
+  top: 20px;
+
+  color: rgba(255,255,255,0.5);
+
+  font-size: 8px;
+
+  letter-spacing: 4px;
+}
+
+
+.ship-cabin {
+  position: absolute;
+
+  right: 35px;
+  bottom: 62px;
+
+  width: 85px;
+  height: 50px;
+
+  background: #e5edf4;
+}
+
+
+.ship-stack {
+  position: absolute;
+
+  right: 110px;
+  bottom: 62px;
+
+  width: 35px;
+  height: 45px;
+
+  background: #b63254;
+}
+
+
+/* =========================
+   SCROLL
+========================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 18px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  text-align: center;
+
+  color: #00d5ff;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+}
+
+
+.scroll-indicator div {
+  margin-top: 3px;
+
+  font-size: 25px;
+
+  animation: scrollArrow 1.5s infinite;
+}
+
+
+@keyframes scrollArrow {
+
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+
+}
+.hero-content {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  padding-top: 225px;
+
+  text-align: center;
+}
+.hero-content p {
+  position: relative;
+
+  z-index: 30;
+
+  margin: 25px auto 35px;
+
+  font-size: 17px;
+
+  color: rgba(255,255,255,0.95);
+}

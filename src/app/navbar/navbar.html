@@ -1,0 +1,31 @@
+<nav
+  class="navbar"
+  [style.transform]="'translateX(' + navMoveX + 'px)'"
+>
+  <div class="navbar-cloud"></div>
+
+  <div class="navbar-content">
+
+    <a class="brand" routerLink="/">
+      <div class="logo-shape">▲</div>
+
+      <div class="brand-name">
+        S P INTERNATIONAL
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+
+      <a routerLink="/contact">
+        Contact Us
+      </a>
+    </div>
+
+  </div>
+</nav>

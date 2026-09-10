@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+/* Container and Layout Styling */
+.link-container {
+  margin: 40px;
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Core Link Animation Setup */
+.animated-link {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  text-decoration: none; /* Removes browser default underline */
+  position: relative;    /* Required anchor point for pseudo-element positioning */
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+/* Creating the hidden custom underline */
+.underline-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3498db; /* Animation line color */
+  transform: scaleX(0);      /* Hides the line initially by shrinking it to 0 width */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out; /* Smooth slide-out timing */
+}
+
+/* Expands the underline across the text on hover */
+.animated-link:hover::after {
+  transform: scaleX(1); /* Expands line to full width */
+}
